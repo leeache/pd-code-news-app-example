@@ -1,13 +1,18 @@
 import { createBrowserRouter } from "react-router";
 import { NewsListPage, NewsDetailPage } from "@/pages";
 
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <NewsListPage />,
+    },
+    {
+      path: "/news",
+      element: <NewsDetailPage />,
+    },
+  ],
   {
-    path: "/",
-    element: <NewsListPage />,
+    basename: "/pd-code-news-app-example/",
   },
-  {
-    path: "/news",
-    element: <NewsDetailPage />,
-  },
-]);
+);
